@@ -14,7 +14,6 @@ body {
   height: 100%;
   display: grid;
   grid-template-columns: 1fr 4fr;
-  grid-template-rows: 1fr 1fr;
   grid-template-areas:
     'sidebar header'
     'sidebar main-content';
@@ -35,13 +34,18 @@ body {
   background-color: var(--main-content-clr);
 }
 
+.sidebar > ul {
+  padding: 12px;
+  margin: 12px;
+}
+
 li {
   list-style-type: none;
 }
 
 img {
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
 }
 
 .sidebar a {
@@ -50,4 +54,20 @@ img {
   display: flex;
   align-items: center;
   gap: 15px;
+  font-size: 1.3rem;
+  padding: 12px 0;
+}
+
+.dashboard a {
+  font-size: 1.6rem;
+  gap: 4px;
+}
+
+img[alt='Dashboard Icon'] {
+  width: 40px;
+  height: 40px;
+}
+
+.sidebar span {
+  font-weight: bold;
 }
