@@ -1,5 +1,6 @@
 :root {
   --sidebar-clr: rgb(251, 146, 60);
+  --header-clr: rgb(230, 230, 230);
   --main-content-clr: rgb(209, 209, 209);
 }
 
@@ -26,7 +27,7 @@ body {
 
 .header {
   grid-area: header;
-  background-color: antiquewhite;
+  background-color: var(--header-clr);
 }
 
 .main-content {
