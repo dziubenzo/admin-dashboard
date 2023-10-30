@@ -3,17 +3,33 @@
   --main-content-clr: rgb(209, 209, 209);
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
 .container {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    'sidebar header'
+    'sidebar main-content';
 }
 
 .sidebar {
+  grid-area: sidebar;
   background-color: var(--sidebar-clr);
 }
 
 .header {
+  grid-area: header;
   background-color: antiquewhite;
 }
 
 .main-content {
+  grid-area: main-content;
   background-color: var(--main-content-clr);
 }
