@@ -1,0 +1,19 @@
+:root {
+  --sidebar-clr: rgb(251, 146, 60);
+  --main-content-clr: rgb(209, 209, 209);
+}
+
+.container {
+}
+
+.sidebar {
+  background-color: var(--sidebar-clr);
+}
+
+.header {
+  background-color: antiquewhite;
+}
+
+.main-content {
+  background-color: var(--main-content-clr);
+}
