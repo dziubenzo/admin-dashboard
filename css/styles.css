@@ -55,6 +55,12 @@ body {
 .main-content {
   grid-area: main-content;
   background-color: var(--main-content-clr);
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    'projects announcements'
+    'projects trending';
 }
 
 .sidebar img {
@@ -210,4 +216,16 @@ img[alt='Dashboard Icon'] {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
+}
+
+.projects {
+  grid-area: projects;
+}
+
+.announcements {
+  grid-area: announcements;
+}
+
+.trending {
+  grid-area: trending;
 }
