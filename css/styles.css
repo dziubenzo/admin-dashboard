@@ -47,7 +47,7 @@ body {
   background-color: var(--header-clr);
   display: grid;
   gap: 8px;
-  padding: 1.5rem 8px;
+  padding: 1.5rem 16px;
   z-index: 1;
   box-shadow: 3px 2px 4px rgb(187, 187, 187);
 }
@@ -61,7 +61,7 @@ body {
   grid-template-areas:
     'projects announcements'
     'projects trending';
-  padding: 0 8px;
+  padding: 0 16px;
 }
 
 .sidebar img {
@@ -200,11 +200,12 @@ img[alt='Dashboard Icon'] {
 
 .header-bottom button {
   background-color: var(--sidebar-clr);
-  font-weight: bold;
+  font-weight: bolder;
   width: 100px;
   height: 40px;
   border-radius: 24px;
   border: none;
+  letter-spacing: 1px;
 }
 
 .header-bottom button:hover {
@@ -217,8 +218,12 @@ img[alt='Dashboard Icon'] {
   gap: 24px;
 }
 
-.projects {
+.projects-grid {
   grid-area: projects;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-auto-rows: 250px;
+  gap: 24px;
 }
 
 .announcements {
@@ -232,10 +237,10 @@ img[alt='Dashboard Icon'] {
 .card {
   background-color: white;
   border-left: 8px solid var(--sidebar-clr);
-  width: 300px;
   border-radius: 8px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 3fr 1fr;
   grid-template-areas:
     'title title title'
     'description description description'
@@ -245,8 +250,8 @@ img[alt='Dashboard Icon'] {
 }
 
 .card img {
-  height: 30px;
-  width: 30px;
+  height: 25px;
+  width: 25px;
 }
 
 .card .title {
@@ -274,4 +279,9 @@ img[alt='Dashboard Icon'] {
 .header img[alt*='Icon'],
 .main-content img[alt*='Icon'] {
   cursor: pointer;
+}
+
+.projects .projects-heading {
+  margin: 0;
+  padding: 24px 0;
 }
