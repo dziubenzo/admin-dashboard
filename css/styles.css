@@ -61,6 +61,7 @@ body {
   grid-template-areas:
     'projects announcements'
     'projects trending';
+  padding: 0 8px;
 }
 
 .sidebar img {
@@ -228,4 +229,43 @@ img[alt='Dashboard Icon'] {
 
 .trending {
   grid-area: trending;
+}
+
+.card {
+  background-color: white;
+  border-left: 8px solid var(--sidebar-clr);
+  width: 300px;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: 
+    'title title title'
+    'description description description'
+    '. icons icons';
+  padding: 2rem 1rem 1.5rem;
+  gap: 12px;
+}
+
+.card img {
+  height: 30px;
+  width: 30px;
+}
+
+.card .title {
+  grid-area: title;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card .description {
+  grid-area: description;
+  font-size: 0.9rem;
+  color: rgb(110, 110, 110);
+  margin: 0;
+}
+
+.card .icons {
+  grid-area: icons;
+  justify-self: end;
 }
