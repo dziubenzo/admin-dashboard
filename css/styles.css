@@ -61,7 +61,7 @@ body {
   grid-template-areas:
     'projects announcements'
     'projects trending';
-  padding: 0 16px;
+  padding: 0 16px 16px;
 }
 
 .sidebar img {
@@ -250,6 +250,7 @@ img[alt='Dashboard Icon'] {
     '. icons icons';
   padding: 2rem 1rem 1.5rem;
   gap: 12px;
+  box-shadow: 1px 1px 5px rgb(165, 165, 165);
 }
 
 .card img {
@@ -284,7 +285,9 @@ img[alt='Dashboard Icon'] {
   cursor: pointer;
 }
 
-.projects .projects-heading {
+.projects-heading,
+.announcements-heading,
+.trending-heading {
   margin: 0;
   padding: 24px 0;
 }
