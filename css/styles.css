@@ -9,6 +9,10 @@
   --search-field-bg-clr: rgb(204, 204, 204);
 }
 
+::selection {
+  background-color: var(--sidebar-clr);
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -119,6 +123,9 @@ img[alt='Dashboard Icon'] {
   color: var(--search-field-text-clr);
   padding: 8px 12px;
   font-size: 1.1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-family: var(--fonts);
 }
 
 .search img {
