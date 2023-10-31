@@ -48,6 +48,8 @@ body {
   display: grid;
   gap: 8px;
   padding: 1.5rem 0;
+  z-index: 1;
+  box-shadow: 3px 2px 4px rgb(187, 187, 187);
 }
 
 .main-content {
