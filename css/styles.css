@@ -22,6 +22,11 @@ body {
 .sidebar {
   grid-area: sidebar;
   background-color: var(--sidebar-clr);
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  place-items: center;
+  padding: 1.5rem;
+  column-gap: 0.5rem;
 }
 
 .header {
@@ -34,16 +39,7 @@ body {
   background-color: var(--main-content-clr);
 }
 
-.sidebar > ul {
-  padding: 12px;
-  margin: 12px;
-}
-
-li {
-  list-style-type: none;
-}
-
-img {
+.sidebar img {
   width: 30px;
   height: 30px;
 }
@@ -51,16 +47,6 @@ img {
 .sidebar a {
   text-decoration: none;
   color: black;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  font-size: 1.3rem;
-  padding: 12px 0;
-}
-
-.dashboard a {
-  font-size: 1.6rem;
-  gap: 4px;
 }
 
 img[alt='Dashboard Icon'] {
@@ -69,5 +55,6 @@ img[alt='Dashboard Icon'] {
 }
 
 .sidebar span {
-  font-weight: bold;
+  font-weight: bolder;
+  justify-self: start;
 }
