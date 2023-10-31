@@ -47,7 +47,7 @@ body {
   background-color: var(--header-clr);
   display: grid;
   gap: 8px;
-  padding: 1.5rem 0;
+  padding: 1.5rem 8px;
   z-index: 1;
   box-shadow: 3px 2px 4px rgb(187, 187, 187);
 }
@@ -96,7 +96,6 @@ img[alt='Dashboard Icon'] {
   display: grid;
   grid-template-columns: 2fr 1fr;
   align-items: center;
-  padding: 0 8px;
 }
 
 .header-top .search {
@@ -161,7 +160,6 @@ img[alt='Dashboard Icon'] {
   display: grid;
   grid-template-columns: 3fr 2fr;
   place-items: center;
-  padding: 0 8px;
 }
 
 .header-bottom img[alt^='Profile'] {
@@ -238,7 +236,7 @@ img[alt='Dashboard Icon'] {
   border-radius: 8px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-areas: 
+  grid-template-areas:
     'title title title'
     'description description description'
     '. icons icons';
@@ -268,4 +266,12 @@ img[alt='Dashboard Icon'] {
 .card .icons {
   grid-area: icons;
   justify-self: end;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.header img[alt*='Icon'],
+.main-content img[alt*='Icon'] {
+  cursor: pointer;
 }
