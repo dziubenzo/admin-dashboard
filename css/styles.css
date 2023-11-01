@@ -121,7 +121,7 @@ img[alt='Dashboard Icon'] {
 .header input,
 .header input:focus {
   outline: none;
-  width: max(100%, 200px);
+  width: max(100%, 210px);
   height: 35px;
   border-radius: 12px;
   border: var(--header-clr);
