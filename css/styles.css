@@ -308,6 +308,8 @@ img[alt='Dashboard Icon'] {
   border-radius: 8px;
   display: grid;
   place-items: center;
+  align-content: start;
+  justify-content: center;
   padding: 24px;
   box-shadow: 1px 1px 5px rgb(165, 165, 165);
 }
@@ -345,6 +347,7 @@ img[alt='Dashboard Icon'] {
   align-items: center;
   justify-items: start;
   gap: 24px;
+  padding: 4px 0;
 }
 
 .trending-item .user {
