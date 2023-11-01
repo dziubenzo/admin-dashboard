@@ -8,6 +8,7 @@
   --search-field-text-clr: rgb(180, 83, 9);
   --search-field-bg-clr: rgb(204, 204, 204);
   --card-description-clr: rgb(110, 110, 110);
+  --icon-clr: invert(66%) sepia(61%) saturate(1950%) hue-rotate(334deg) brightness(106%) contrast(97%);
 }
 
 ::selection {
@@ -355,4 +356,9 @@ img[alt='Dashboard Icon'] {
   font-size: 0.85rem;
   color: var(--card-description-clr);
   padding-top: 4px;
+}
+
+.header-top img[alt*='Icon'],
+.projects img[alt*='Icon'] {
+  filter: var(--icon-clr);
 }
