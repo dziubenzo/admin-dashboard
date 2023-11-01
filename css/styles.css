@@ -233,6 +233,8 @@ img[alt='Dashboard Icon'] {
 
 .announcements {
   grid-area: announcements;
+  display: grid;
+  grid-template-rows: min-content 1fr;
 }
 
 .trending {
@@ -300,8 +302,8 @@ img[alt='Dashboard Icon'] {
   background-color: white;
   border-radius: 8px;
   display: grid;
-  padding: 32px;
-  gap: 8px;
+  place-items: center;
+  padding: 24px;
   box-shadow: 1px 1px 5px rgb(165, 165, 165);
 }
 
@@ -316,6 +318,7 @@ img[alt='Dashboard Icon'] {
 
 .announcement-description {
   font-size: 0.75rem;
+  margin: 8px 0;
   color: var(--card-description-clr);
   display: -webkit-box;
   -webkit-line-clamp: 4;
