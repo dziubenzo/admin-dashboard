@@ -366,7 +366,12 @@ img[alt='Dashboard Icon'] {
   padding-top: 4px;
 }
 
-.header-top img[alt*='Icon'],
 .projects img[alt*='Icon'] {
   filter: var(--icon-clr);
+}
+
+/* Strange fix to a bug where icons with the filter property applied wouldn't get the background-color set with the ::selection pseudo-element (they would be green instead) */
+
+.projects img[alt*='Icon']::selection {
+  background-color: black;
 }
