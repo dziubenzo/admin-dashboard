@@ -5,8 +5,10 @@
   --header-clr: rgb(230, 230, 230);
   --main-content-clr: rgb(209, 209, 209);
   --fonts: 'Raleway', sans-serif, 'Roboto';
-  --search-field-text-clr: rgb(180, 83, 9);
-  --search-field-bg-clr: rgb(204, 204, 204);
+  --search-box-text-clr: rgb(180, 83, 9);
+  --search-box-placeholder-clr: rgb(180, 83, 9, 0.7);
+  --search-box-bg-clr: rgb(204, 204, 204);
+  --search-box-bg-hover-clr: rgb(197, 197, 197);
   --card-description-clr: rgb(110, 110, 110);
   --icon-clr: invert(66%) sepia(61%) saturate(1950%) hue-rotate(334deg)
     brightness(106%) contrast(97%);
@@ -43,9 +45,9 @@ body {
   grid-template-columns: 1fr 4fr;
   grid-auto-rows: 40px;
   place-items: center;
-  padding: 2rem 1rem;
-  column-gap: 1rem;
-  row-gap: 0.5rem;
+  padding: 24px 16px;
+  column-gap: 16px;
+  row-gap: 8px;
   position: sticky;
   top: 0px;
 }
@@ -58,7 +60,7 @@ body {
   place-items: center;
   row-gap: 8px;
   column-gap: 16px;
-  padding: 24px 16px;
+  padding: 16px 16px;
   z-index: 1;
   box-shadow: 3px 2px 4px rgb(187, 187, 187);
 }
@@ -105,8 +107,8 @@ img[alt='Dashboard Icon'] {
 }
 
 .header img[alt*='Icon'] {
-  height: 30px;
-  width: 30px;
+  height: 25px;
+  width: 25px;
 }
 
 .header img[alt^='Profile'],
@@ -123,13 +125,22 @@ img[alt='Dashboard Icon'] {
   height: 35px;
   border-radius: 12px;
   border: var(--header-clr);
-  background-color: var(--search-field-bg-clr);
-  color: var(--search-field-text-clr);
+  background-color: var(--search-box-bg-clr);
+  color: var(--search-box-text-clr);
   padding: 8px 12px;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   font-weight: bold;
   letter-spacing: 1px;
   font-family: var(--fonts);
+}
+
+.header input:hover {
+  background-color: var(--search-box-bg-hover-clr);
+}
+
+.header input::placeholder {
+  font-size: 0.9rem;
+  color: var(--search-box-placeholder-clr);
 }
 
 .header-top-right-side {
@@ -239,6 +250,20 @@ img[alt='Dashboard Icon'] {
   padding: 2rem 1rem 1.5rem;
   gap: 12px;
   box-shadow: 1px 1px 5px rgb(165, 165, 165);
+}
+
+.card:hover,
+.announcement-text:hover,
+.trending-item:hover {
+  background-color: #fff5ea;
+}
+
+.announcement-text:hover {
+  border-radius: 8px;
+}
+
+.trending-item:hover {
+  border-radius: 40px;
 }
 
 .card img {
